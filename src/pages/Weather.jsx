@@ -39,6 +39,7 @@ export function Weather({ isLight }) {
     }
     fetchData(cityKey)
     dispatch(checkIfFav(cityKey))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cityKey, dispatch, isCelsius, currCity])
 
   useEffect(() => {
@@ -130,7 +131,7 @@ export function Weather({ isLight }) {
             txt={{ off: '°F', on: '°C' }} />
           <h1 className="city-name">{cityName}</h1>
 
-          <button className="fav-toggle" onClick={toggleFavorite} style={{ backgroundColor: isLight ? '#3369ff' : '#1b3b95' }}>
+          <button className="fav-toggle" onClick={toggleFavorite} style={{ backgroundColor: isLight ? '#FFFAFA' : '#FFFAFA' }}>
             <Typography variant="body1" component="div" sx={{ flexGrow: 1 }} align="center">
               {isFave ? 'Remove From Favorites' : 'Add To Favorites'}
             </ Typography>

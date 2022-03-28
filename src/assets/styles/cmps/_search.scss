@@ -1,13 +1,14 @@
 .search-container{
     margin-top: rem(80px);
     @include for-wide-layout{
-    margin-top: 0    
+    margin-top: 0    ;
+
     }
 
     .search-results{
         z-index: 2;
         position: fixed;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.781);
         width: rem(232px);
         border-radius: rem(8px);
         padding: rem(5px) rem(5px) rem(5px) rem(15px);
@@ -29,7 +30,7 @@
     .search-results-dark{
         z-index: 2;
         position: fixed;
-        background-color: rgb(39, 36, 36);
+        background-color: rgb(97, 96, 96);
         width: rem(232px);
         border-radius: rem(8px);
         padding: rem(5px) rem(5px) rem(5px) rem(15px);
@@ -37,7 +38,7 @@
     
         .search-result{
             &:hover{
-                background-color: #0d3964df;
+                background-color: #000000df;
                 color: white;
                 cursor: pointer;
             }

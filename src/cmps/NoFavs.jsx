@@ -11,7 +11,7 @@ export const NoFavs = ({isLight}) =>{
 
     return <div className="no-favs-container" style={style}>
         <h1>No Favorites</h1>
-        <h5>You have no favorite cities.</h5>
+        <h5>Added Favorite Cities Will Show Here.</h5>
     </div>
 
 }

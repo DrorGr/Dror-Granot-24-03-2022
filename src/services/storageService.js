@@ -16,7 +16,7 @@ function query(STORAGE_KEY) {
     gFavCities = entities
     return entities
 }
-
+    
 function save(STORAGE_KEY, cityKey, cityName) {
     const entities = JSON.parse(localStorage.getItem(STORAGE_KEY)) || []
     if (entities.some(entity => entity.cityKey === cityKey)) return

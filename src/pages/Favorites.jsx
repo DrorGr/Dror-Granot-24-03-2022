@@ -11,7 +11,6 @@ import { getCurrWeather, removeFavorites, setCity } from '../store/actions/favor
 export function Favorites({ isLight }) {
 
   const dispatch = useDispatch()
-
   const { currWeather } = useSelector(state => state.favoritesModule)
 
   useEffect(() => {

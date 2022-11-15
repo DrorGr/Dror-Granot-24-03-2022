@@ -27,17 +27,17 @@ html {
 
 body {
     margin: 0;
-    background: linear-gradient(-90deg, #f5f7a2, #f38f8f, #88daf8, #87f8de);
-	background-size: 400% 400%;
+    background: linear-gradient(90deg, #f5f7a2, #fefa80, #a5e5fd, #03a6fe);
+	background-size: 200% 200%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;;
 }
 
 .body-dark{
     margin: 0;
-    background: linear-gradient(-90deg, #000000, #585858, #000000, #585858);
-	background-size: 400% 400%;
-	animation: gradient 30s ease infinite;
+    background: linear-gradient(90deg, #000000, #585858, #000000, #585858);
+	background-size: 200% 200%;
+	animation: gradient 15s ease infinite;
 	height: 100vh;;
 }
 @keyframes gradient {

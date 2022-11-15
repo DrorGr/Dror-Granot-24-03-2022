@@ -52,10 +52,13 @@ export function SearchCity({ onSetCityKey, isLight }) {
         ev.preventDefault()
         const { value } = ev.target
         try {
+            
             setUserInput(value)
             const results = await weatherService.setSearchRes(value)
             const filteredResults = results.slice(0, 5)
-            setSearchRes(filteredResults)
+            setTimeout(() => {
+                setSearchRes(filteredResults)
+            }, 500); 
         } catch (err) {}
     }
 
@@ -87,6 +90,8 @@ export function SearchCity({ onSetCityKey, isLight }) {
             document.removeEventListener("mousedown", handler)
         }
     })
+
+
 
     return <div className="search-container">
         <Box

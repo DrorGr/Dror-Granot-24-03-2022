@@ -5,7 +5,10 @@ export const weatherService = {
     getCityLocation
 }
 
-const apiKey = 'bx9dALdlwT5GtoStaROSIQEFLnG2QKR7'
+const apiKey = 'muP9MToAeuaG0AGSOOV2Z8PzRUMWibKU'
+// const cityKey = "215854"
+
+
 
 async function getCurrWeather(cityKey) {
     const api = `https://dataservice.accuweather.com/currentconditions/v1/${cityKey}?apikey=${apiKey}&details=false`

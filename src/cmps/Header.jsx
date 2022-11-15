@@ -11,9 +11,7 @@ import { ToggleButton } from '../helpers/ToggleButton.js'
 export function Header({ isLight, setIsLight }) {
 
   const location = useLocation();
-
   const [headerClass, setHeaderClass] = useState('')
-
   const titleStyle = { color: isLight ? 'black' : 'white' };
 
   const weatherBtnStyle = {
@@ -31,7 +29,6 @@ export function Header({ isLight, setIsLight }) {
     borderRadius: '8px',
     padding: '3px'
   }
-
 
 
   const handleToggle = () => {
@@ -53,7 +50,7 @@ export function Header({ isLight, setIsLight }) {
         <AppBar position="static" color="transparent">
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <Link to={'/'} style={titleStyle}>Herolo Weather App</Link>
+              <Link to={'/'} style={titleStyle}>SVG College - Final project</Link>
             </Typography>
             <div className="header-toggle">
               <ToggleButton

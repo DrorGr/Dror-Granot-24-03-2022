@@ -5,6 +5,9 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 
+
+///error modal, handles api error/ overuse///
+
 export function Error({isLight}) {
 
     const backdropStyle = {

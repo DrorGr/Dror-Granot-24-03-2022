@@ -1,6 +1,9 @@
 import Switch from '@mui/material/Switch';
 import { makeStyles } from "@material-ui/core/styles";
 
+
+/// toggle button component/////
+
 export function ToggleButton({ isOn, handleToggle, txt, isLight }) {
 
     const style = { color: isLight ? 'black' : 'white' };

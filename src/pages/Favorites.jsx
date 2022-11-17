@@ -1,15 +1,16 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-
 import { CardUI } from '../cmps/CardUI';
 import { NoFavs } from '../cmps/NoFavs'
 import Typography from '@mui/material/Typography';
-
 import { getCurrWeather, removeFavorites, setCity } from '../store/actions/favoritesActions.js'
 
+
+//// favorits component/////
 export function Favorites({ isLight }) {
 
+  ////using redax stored data////
   const dispatch = useDispatch()
   const { currWeather } = useSelector(state => state.favoritesModule)
 
@@ -17,23 +18,24 @@ export function Favorites({ isLight }) {
     dispatch(getCurrWeather())
   }, [dispatch])
 
+  ///// removes city from favorites////
   const handleRemove = (ev, cityKey) => {
     ev.preventDefault()
     dispatch(removeFavorites(cityKey))
     dispatch(getCurrWeather())
   }
-
+ //// 
   const handleLink = (cityKey, cityName) => {
     dispatch(setCity(cityKey, cityName))
   }
-
+  ///// handleing card texted details ////
   const setCardTxt = (city) => {
     const txt1 = city.cityName
     const txt2 = city.currCityWeather[0].WeatherText
     const txt = { txt1, txt2 }
     return txt
   }
-
+ //// conditional loading -
   if (!currWeather || currWeather.length < 1) return <NoFavs isLight={isLight}/>
 
   return (

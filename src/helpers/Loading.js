@@ -1,5 +1,8 @@
 import loadingImg from '../assets/img/loading.gif'
 
+
+/// loader for handeling fetch api delay////
+
 export function Loading() {
 
     const style = {
